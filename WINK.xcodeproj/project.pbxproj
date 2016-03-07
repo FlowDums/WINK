@@ -14,6 +14,8 @@
 		BE735ACD1C8DBB6300AC95F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE735ACB1C8DBB6300AC95F0 /* LaunchScreen.storyboard */; };
 		BE735AD81C8DBB6300AC95F0 /* WINKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE735AD71C8DBB6300AC95F0 /* WINKTests.swift */; };
 		BE735AE31C8DBB6300AC95F0 /* WINKUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE735AE21C8DBB6300AC95F0 /* WINKUITests.swift */; };
+		BE735AF11C8DC06B00AC95F0 /* UIViewExtendCarre.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE735AF01C8DC06B00AC95F0 /* UIViewExtendCarre.swift */; settings = {ASSET_TAGS = (); }; };
+		BE735AF61C8DE37A00AC95F0 /* where-s-cage1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BE735AF51C8DE37A00AC95F0 /* where-s-cage1.jpg */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		BE735ADE1C8DBB6300AC95F0 /* WINKUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WINKUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE735AE21C8DBB6300AC95F0 /* WINKUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WINKUITests.swift; sourceTree = "<group>"; };
 		BE735AE41C8DBB6300AC95F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE735AF01C8DC06B00AC95F0 /* UIViewExtendCarre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtendCarre.swift; sourceTree = "<group>"; };
+		BE735AF51C8DE37A00AC95F0 /* where-s-cage1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "where-s-cage1.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +101,14 @@
 		BE735AC11C8DBB6300AC95F0 /* WINK */ = {
 			isa = PBXGroup;
 			children = (
+				BE735AF21C8DE32300AC95F0 /* Image */,
 				BE735AC21C8DBB6300AC95F0 /* AppDelegate.swift */,
 				BE735AC41C8DBB6300AC95F0 /* ViewController.swift */,
 				BE735AC61C8DBB6300AC95F0 /* Main.storyboard */,
 				BE735AC91C8DBB6300AC95F0 /* Assets.xcassets */,
 				BE735ACB1C8DBB6300AC95F0 /* LaunchScreen.storyboard */,
 				BE735ACE1C8DBB6300AC95F0 /* Info.plist */,
+				BE735AF01C8DC06B00AC95F0 /* UIViewExtendCarre.swift */,
 			);
 			path = WINK;
 			sourceTree = "<group>";
@@ -123,6 +129,14 @@
 				BE735AE41C8DBB6300AC95F0 /* Info.plist */,
 			);
 			path = WINKUITests;
+			sourceTree = "<group>";
+		};
+		BE735AF21C8DE32300AC95F0 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				BE735AF51C8DE37A00AC95F0 /* where-s-cage1.jpg */,
+			);
+			name = Image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +242,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE735AF61C8DE37A00AC95F0 /* where-s-cage1.jpg in Resources */,
 				BE735ACD1C8DBB6300AC95F0 /* LaunchScreen.storyboard in Resources */,
 				BE735ACA1C8DBB6300AC95F0 /* Assets.xcassets in Resources */,
 				BE735AC81C8DBB6300AC95F0 /* Main.storyboard in Resources */,
@@ -255,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE735AF11C8DC06B00AC95F0 /* UIViewExtendCarre.swift in Sources */,
 				BE735AC51C8DBB6300AC95F0 /* ViewController.swift in Sources */,
 				BE735AC31C8DBB6300AC95F0 /* AppDelegate.swift in Sources */,
 			);

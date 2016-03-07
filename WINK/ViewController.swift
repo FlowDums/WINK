@@ -13,11 +13,23 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
     
+    var obstacleViews : [UIView] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         scrollView.maximumZoomScale = 6.0;
         scrollView.minimumZoomScale = 1.0;
+        
+        // Create an obstacle view and add it to the scroll view for testing purposes
+        let obstacleView = UICarreView(vm:self)
+        
+        
+        //obstacleView.backgroundColor = UIColor.clearColor()
+        
+        obstacleView.backgroundColor = UIColor.redColor();
+        scrollView.addSubview(obstacleView)
+        
         
     }
 
@@ -29,6 +41,10 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
         return self.imageView
     }
+    
+    
+    
+    
     
 
 }
