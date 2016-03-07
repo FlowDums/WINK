@@ -17,7 +17,7 @@ import UIKit
     init(vm:ViewController)
     {
         ViewControll = vm
-        super.init(frame: CGRectMake(20,20,20,20))
+        super.init(frame: CGRectMake(113,293,9,9))
         
     }
 
@@ -32,11 +32,13 @@ import UIKit
     
     }
     
-    func testTouches(touches: Set<UITouch>!) {
+    func testTouches(touches: Set<UITouch>!)
+    {
+       let alert = UIAlertController(title: "Félicitations 😃", message: "Vous avez trouver Nicolas !", preferredStyle: UIAlertControllerStyle.Alert)
         
-       let alert = UIAlertController(title: "UIAlertController", message: "Vous avez cliquer", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Continuer", style: UIAlertActionStyle.Default, handler: {action in self.ViewControll.saveScores()}))
         
-            ViewControll.presentViewController(alert, animated: true, completion: nil)
+        ViewControll.presentViewController(alert, animated: true, completion: nil)
     }
         
 }

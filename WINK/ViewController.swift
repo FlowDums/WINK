@@ -12,6 +12,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
+    private var pseudo: String = ""
     
     var obstacleViews : [UIView] = []
     
@@ -40,6 +41,27 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
         return self.imageView
+    }
+    
+    func saveScores()
+    {
+        
+        let alert = UIAlertController(title: "Score", message: "Entrer votre pseudo :", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        alert.addTextFieldWithConfigurationHandler({(textField: UITextField!) in
+            textField.placeholder = nil
+            self.pseudo = textField.text!})
+        
+        alert.addAction(UIAlertAction(title: "Enregistrer", style: UIAlertActionStyle.Default, handler: {action in self.showScores(self.pseudo)}))
+        
+        self.presentViewController(alert, animated: true, completion: nil)
+    
+    }
+    
+    func showScores(player: String)
+    {
+
+        
     }
     
     
