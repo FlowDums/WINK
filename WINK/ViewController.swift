@@ -62,7 +62,6 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         }
         
         lblTimer.text = String(format: "%02d:%02d", CounterSec, CounterMS)
-    
     }
     
     

@@ -25,6 +25,20 @@
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73w-hc-fWF">
+                                        <rect key="frame" x="142" y="37" width="131" height="27"/>
+                                        <animations/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="00:00:00">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="30" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <animations/>
                                 <constraints>
@@ -39,27 +53,15 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="17u-vt-pUJ"/>
                                 </connections>
                             </scrollView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73w-hc-fWF">
-                                <rect key="frame" x="141" y="355" width="131" height="27"/>
-                                <animations/>
-                                <attributedString key="attributedText">
-                                    <fragment content="00:00:00">
-                                        <attributes>
-                                            <color key="NSColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="73w-hc-fWF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="17" id="2zH-oi-jCu"/>
                             <constraint firstItem="h0L-KD-UYD" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Gga-ig-65c"/>
                             <constraint firstItem="h0L-KD-UYD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RLW-uH-dZI"/>
                             <constraint firstItem="h0L-KD-UYD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="c0v-yL-3WU"/>
+                            <constraint firstItem="73w-hc-fWF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="du4-9N-cH5"/>
                             <constraint firstAttribute="trailing" secondItem="h0L-KD-UYD" secondAttribute="trailing" id="wll-0J-wrq"/>
                         </constraints>
                     </view>
