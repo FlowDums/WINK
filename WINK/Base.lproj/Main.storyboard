@@ -13,24 +13,46 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" ambiguous="YES" indicatorStyle="black" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="h0L-KD-UYD">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" indicatorStyle="black" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="h0L-KD-UYD">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
-                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="where-s-cage1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="XIC-O3-AD3">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="where-s-cage1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="XIC-O3-AD3">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                         <animations/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                     </imageView>
                                 </subviews>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstItem="XIC-O3-AD3" firstAttribute="centerY" secondItem="h0L-KD-UYD" secondAttribute="centerY" id="1Gk-me-VRh"/>
+                                    <constraint firstItem="XIC-O3-AD3" firstAttribute="centerX" secondItem="h0L-KD-UYD" secondAttribute="centerX" id="Bdt-h6-at3"/>
+                                    <constraint firstAttribute="trailing" secondItem="XIC-O3-AD3" secondAttribute="trailing" id="JZu-jx-QlS"/>
+                                    <constraint firstItem="XIC-O3-AD3" firstAttribute="leading" secondItem="h0L-KD-UYD" secondAttribute="leading" id="MXL-5x-tcA"/>
+                                    <constraint firstAttribute="bottom" secondItem="XIC-O3-AD3" secondAttribute="bottom" id="rxM-lF-N6I"/>
+                                    <constraint firstItem="XIC-O3-AD3" firstAttribute="top" secondItem="h0L-KD-UYD" secondAttribute="top" id="uWu-wO-8zW"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="17u-vt-pUJ"/>
                                 </connections>
                             </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73w-hc-fWF">
+                                <rect key="frame" x="141" y="355" width="131" height="27"/>
+                                <animations/>
+                                <attributedString key="attributedText">
+                                    <fragment content="00:00:00">
+                                        <attributes>
+                                            <color key="NSColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -41,9 +63,10 @@
                             <constraint firstAttribute="trailing" secondItem="h0L-KD-UYD" secondAttribute="trailing" id="wll-0J-wrq"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="imageView" destination="XIC-O3-AD3" id="wPQ-AB-BA5"/>
+                        <outlet property="lblTimer" destination="73w-hc-fWF" id="fGV-2k-8rn"/>
                         <outlet property="scrollView" destination="h0L-KD-UYD" id="mi6-Bg-kOg"/>
                     </connections>
                 </viewController>

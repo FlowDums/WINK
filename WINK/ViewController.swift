@@ -10,11 +10,15 @@ import UIKit
 
 class ViewController: UIViewController, UIScrollViewDelegate {
 
+    @IBOutlet weak var lblTimer: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
+
     private var pseudo: String = ""
-    
-    var obstacleViews : [UIView] = []
+
+    var Timer = NSTimer();
+    var CounterSec = 0
+    var CounterMS = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,17 +26,15 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         scrollView.maximumZoomScale = 6.0;
         scrollView.minimumZoomScale = 1.0;
         
-        // Create an obstacle view and add it to the scroll view for testing purposes
+       
         let obstacleView = UICarreView(vm:self)
         
-        obstacleView.backgroundColor = UIColor.clearColor()
+      //  obstacleView.backgroundColor = UIColor.clearColor()
         
-        //obstacleView.backgroundColor = UIColor.clearColor()
         
         obstacleView.backgroundColor = UIColor.redColor();
         imageView.addSubview(obstacleView)
-        
-        imageView.addSubview(obstacleView)
+        StartTimer()
         
     }
 
@@ -40,6 +42,29 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         super.didReceiveMemoryWarning()
        
     }
+    
+    func StartTimer()
+    {
+        if(Timer.valid == false)
+        {
+            Timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: Selector("UpdateTimer"), userInfo: nil, repeats: true)
+        }
+    }
+    
+    func UpdateTimer()
+    {
+        if CounterMS == 99{
+            CounterMS = 0
+            CounterSec++
+        }
+        else{
+            CounterMS++
+        }
+        
+        lblTimer.text = String(format: "%02d:%02d", CounterSec, CounterMS)
+    
+    }
+    
     
     func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
         return self.imageView
