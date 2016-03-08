@@ -59,9 +59,20 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     func showScores(player: String)
     {
-
+        //var time: NSTimer!
+        //time = NSTimer.init()
         
-    }
+        //let player = scores(playerName: player, playerScore: time)
+        
+        performSegueWithIdentifier("scoresShow", sender: self)
+        
+        //let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        //let vc = storyboard.instantiateViewControllerWithIdentifier("View Score")
+        
+        //self.presentViewController(vc, animated: true, completion: nil)
+        
+        }
     
     
     
