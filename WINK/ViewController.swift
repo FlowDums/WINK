@@ -25,12 +25,14 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         // Create an obstacle view and add it to the scroll view for testing purposes
         let obstacleView = UICarreView(vm:self)
         
+        obstacleView.backgroundColor = UIColor.clearColor()
         
         //obstacleView.backgroundColor = UIColor.clearColor()
         
         obstacleView.backgroundColor = UIColor.redColor();
         imageView.addSubview(obstacleView)
         
+        imageView.addSubview(obstacleView)
         
     }
 
