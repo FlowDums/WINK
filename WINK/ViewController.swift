@@ -29,7 +29,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         //obstacleView.backgroundColor = UIColor.clearColor()
         
         obstacleView.backgroundColor = UIColor.redColor();
-        scrollView.addSubview(obstacleView)
+        imageView.addSubview(obstacleView)
         
         
     }
