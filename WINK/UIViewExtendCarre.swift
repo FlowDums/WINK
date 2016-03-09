@@ -71,7 +71,7 @@ public extension UIDevice {
     init(vm:ViewController)
     {
         ViewControll = vm
-        super.init(frame: CGRectMake(113,293,9,9))
+        super.init(frame: CGRectMake(109,249,10,12))
         CheckDevice()
         
     }
@@ -105,7 +105,7 @@ public extension UIDevice {
     
          var rect = CGRectMake(100, 100, 100, 100)
         
-        var test = UIDevice().modelName
+         var test = UIDevice().modelName
 
         
         return rect;

@@ -9,32 +9,33 @@
 import UIKit
 import Foundation
 
-public class scores
+public class Player
 {
     var name: String
-    var time: NSTimer
+    var time: String
+    
     var players: UITableView!
     
-    init(playerName:String, playerScore:NSTimer)
+    init(playerName:String, playerScore:String)
     {
         self.name = playerName
         self.time = playerScore
         self.addPlayer()
     }
     
-    private func addPlayer()
+    public func getName() -> String
     {
-        var player: UITableViewCell!
-        
-        player.textLabel?.text = self.name
-        
-        players.dequeueReusableCellWithIdentifier(self.name)
-        
-        
-        
+        return self.name
     }
     
+    public func getTime() -> String
+    {
+        return self.time
+    }
     
-    
+    private func addPlayer()
+    {
+        
+    }
     
 }

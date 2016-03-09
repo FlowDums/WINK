@@ -31,8 +31,8 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         
       //  obstacleView.backgroundColor = UIColor.clearColor()
         
-        
         obstacleView.backgroundColor = UIColor.redColor();
+        
         imageView.addSubview(obstacleView)
         StartTimer()
         
@@ -65,7 +65,8 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     }
     
     
-    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView?
+    {
         return self.imageView
     }
     
@@ -86,20 +87,11 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     func showScores(player: String)
     {
-        //var time: NSTimer!
-        //time = NSTimer.init()
-        
-        //let player = scores(playerName: player, playerScore: time)
+        Player(playerName: player, playerScore: lblTimer.text!)
         
         performSegueWithIdentifier("scoresShow", sender: self)
         
-        //let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        //let vc = storyboard.instantiateViewControllerWithIdentifier("View Score")
-        
-        //self.presentViewController(vc, animated: true, completion: nil)
-        
-        }
+    }
     
     
     

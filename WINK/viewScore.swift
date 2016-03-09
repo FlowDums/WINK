@@ -11,5 +11,9 @@ import UIKit
 
 class viewScore :UIViewController
 {
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+    }
 }
