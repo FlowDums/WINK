@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var lblTimer: UILabel!
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageView: UICustomImage!
     @IBOutlet weak var scrollView: UIScrollView!
 
     private var pseudo: String = ""
@@ -41,8 +41,8 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         let validArea = UICarreView(vm:self, rectAre: rectArea)
         
         //  obstacleView.backgroundColor = UIColor.clearColor()
-        
-        validArea.backgroundColor = UIColor.redColor();
+         validArea.backgroundColor = UIColor.redColor()
+
         imageView.addSubview(validArea)
         
     }
@@ -55,26 +55,19 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         
         switch model
         {
-        case "iPod Touch 5" :       rect = CGRectMake(113,293,9,9)
-        case "iPod Touch 6" :       rect = CGRectMake(200,300,50,50)
-        case "iPhone 4":        rect = CGRectMake(113,293,9,9)
-        case "iPhone 4s":       rect = CGRectMake(113,293,9,9)
-        case "iPhone 5":        rect = CGRectMake(113,293,9,9)
-        case "iPhone 5c":       rect = CGRectMake(113,293,9,9)
-        case "iPhone 5s":       rect = CGRectMake(113,293,9,9)
-        case "iPhone 6":        rect = CGRectMake(30,293,9,9)
-        case "iPhone 6 Plus":   rect = CGRectMake(1000,293,9,9)
-        case "iPhone 6s":       rect = CGRectMake(113,293,9,9)
-        case "iPhone 6s Plus":  rect = CGRectMake(113,293,9,9)
-        case "iPad 2":          rect = CGRectMake(113,293,9,9)
-        case "iPad 3":          rect = CGRectMake(113,293,9,9)
-        case "iPad 4":          rect = CGRectMake(113,293,9,9)
-        case "iPad Air":        rect = CGRectMake(113,293,9,9)
-        case "iPad Air 2":      rect = CGRectMake(113,293,9,9)
-        case "iPad Mini":       rect = CGRectMake(113,293,9,9)
-        case "iPad Mini 2":     rect = CGRectMake(113,293,9,9)
-        case "iPad Mini 3":     rect = CGRectMake(113,293,9,9)
-        case "iPad Mini 4":     rect = CGRectMake(113,293,9,9)
+        
+        case "iPhone 4":        rect = CGRectMake(111,250,10,10)
+        case "iPhone 4s":       rect = CGRectMake(111,250,10,10)
+        case "iPhone 5":        rect = CGRectMake(111,295,10,10)
+        case "iPhone 5c":       rect = CGRectMake(111,295,10,10)
+        case "iPhone 5s":       rect = CGRectMake(111,295,10,10)
+        case "iPhone 6":        rect = CGRectMake(130,348,10,10)
+        case "iPhone 6 Plus":   rect = CGRectMake(145,385,10,10)
+        case "iPhone 6s":       rect = CGRectMake(127,346,10,10)
+        case "iPhone 6s Plus":  rect = CGRectMake(145,385,10,10)
+        case "iPad 2":          rect = CGRectMake(258,543,25,25)
+        case "iPad Air":        rect = CGRectMake(265,539,25,25)
+        case "iPad Air 2":      rect = CGRectMake(265,539,25,25)
         default :               rect = CGRectMake(1,1,9,9)
             
         }
