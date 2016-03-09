@@ -36,7 +36,7 @@ public class Player
     
     public func addPlayer()
     {
-        Player.players.append(self.getName() + " " + self.getTime())//(self)
+        Player.players.append(self.getName() + " --------------- " + self.getTime())//(self)
     }
     
     public static func getPlayers() -> [String]!//[Player]!

@@ -14,7 +14,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var imageView: UICustomImage!
     @IBOutlet weak var scrollView: UIScrollView!
 
-    var pseudo: String = "test"
+    var pseudo: UITextField?
 
     var Timer = NSTimer();
     var CounterSec = 0
@@ -104,22 +104,22 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     func saveScores()
     {
-        
-        let alert = UIAlertController(title: "Score", message: "Entrer votre pseudo :", preferredStyle: UIAlertControllerStyle.Alert)
+        var time: String = lblTimer.text!
+        let alert = UIAlertController(title: "Félicitations 😃  \r Vous avez trouver Nicolas !", message: "Entrer votre pseudo:", preferredStyle: UIAlertControllerStyle.Alert)
         
         alert.addTextFieldWithConfigurationHandler({(textField: UITextField!) in
             textField.placeholder = nil
-            self.pseudo = textField.text!})
+            self.pseudo = textField})
         
-        alert.addAction(UIAlertAction(title: "Enregistrer", style: UIAlertActionStyle.Default, handler: {action in self.showScores(self.pseudo)}))
+        alert.addAction(UIAlertAction(title: "Enregistrer", style: UIAlertActionStyle.Default, handler: {action in self.showScores((self.pseudo?.text)!, time: time)}))
         
         self.presentViewController(alert, animated: true, completion: nil)
     
     }
     
-    func showScores(player: String)
+    func showScores(player: String, time: String)
     {
-        let player = Player(playerName: "test ?", playerScore: lblTimer.text!)
+        Player(playerName: player, playerScore: time)
         
         performSegueWithIdentifier("scoresShow", sender: self)
         

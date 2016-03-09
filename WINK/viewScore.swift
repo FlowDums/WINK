@@ -9,16 +9,17 @@
 import Foundation
 import UIKit
 
-class viewScore :UIViewController, UITableViewDelegate
+class viewScore: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
         
-        let players = Player.getPlayers()
+    let players:[String] = Player.getPlayers()
     
         var name: String = ""
         var score: String = ""
@@ -29,11 +30,13 @@ class viewScore :UIViewController, UITableViewDelegate
         //    score = player.getTime()
         //}
         
-        func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+        {
             return self.players.count;
         }
         
-        func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+        {
             var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
             
             cell.textLabel?.text = self.players[indexPath.row]
@@ -41,7 +44,8 @@ class viewScore :UIViewController, UITableViewDelegate
             return cell
         }
         
-        func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+        {
             print("You selected cell #\(indexPath.row)!")
         }
 }

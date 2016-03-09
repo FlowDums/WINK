@@ -95,11 +95,7 @@ class UICustomImage : UIImageView
     
     func testTouches(touches: Set<UITouch>!)
     {
-       let alert = UIAlertController(title: "Félicitations 😃", message: "Vous avez trouver Nicolas !", preferredStyle: UIAlertControllerStyle.Alert)
-        
-        alert.addAction(UIAlertAction(title: "Continuer", style: UIAlertActionStyle.Default, handler: {action in self.ViewControll.saveScores()}))
-        
-        ViewControll.presentViewController(alert, animated: true, completion: nil)
+       self.ViewControll.saveScores()
     }
     
     
