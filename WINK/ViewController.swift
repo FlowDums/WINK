@@ -25,15 +25,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         
         scrollView.maximumZoomScale = 6.0;
         scrollView.minimumZoomScale = 1.0;
-        
-       
-        let obstacleView = UICarreView(vm:self)
-        
-      //  obstacleView.backgroundColor = UIColor.clearColor()
-        
-        
-        obstacleView.backgroundColor = UIColor.redColor();
-        imageView.addSubview(obstacleView)
+        CreateValidArea()
         StartTimer()
         
     }
@@ -42,6 +34,54 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         super.didReceiveMemoryWarning()
        
     }
+    
+    func CreateValidArea()
+    {
+        let rectArea = CheckDevice()
+        let validArea = UICarreView(vm:self, rectAre: rectArea)
+        
+        //  obstacleView.backgroundColor = UIColor.clearColor()
+        
+        validArea.backgroundColor = UIColor.redColor();
+        imageView.addSubview(validArea)
+        
+    }
+    
+    
+    func CheckDevice()->CGRect
+    {
+        let model = UIDevice().modelName
+        let rect:CGRect
+        
+        switch model
+        {
+        case "iPod Touch 5" :       rect = CGRectMake(113,293,9,9)
+        case "iPod Touch 6" :       rect = CGRectMake(200,300,50,50)
+        case "iPhone 4":        rect = CGRectMake(113,293,9,9)
+        case "iPhone 4s":       rect = CGRectMake(113,293,9,9)
+        case "iPhone 5":        rect = CGRectMake(113,293,9,9)
+        case "iPhone 5c":       rect = CGRectMake(113,293,9,9)
+        case "iPhone 5s":       rect = CGRectMake(113,293,9,9)
+        case "iPhone 6":        rect = CGRectMake(30,293,9,9)
+        case "iPhone 6 Plus":   rect = CGRectMake(1000,293,9,9)
+        case "iPhone 6s":       rect = CGRectMake(113,293,9,9)
+        case "iPhone 6s Plus":  rect = CGRectMake(113,293,9,9)
+        case "iPad 2":          rect = CGRectMake(113,293,9,9)
+        case "iPad 3":          rect = CGRectMake(113,293,9,9)
+        case "iPad 4":          rect = CGRectMake(113,293,9,9)
+        case "iPad Air":        rect = CGRectMake(113,293,9,9)
+        case "iPad Air 2":      rect = CGRectMake(113,293,9,9)
+        case "iPad Mini":       rect = CGRectMake(113,293,9,9)
+        case "iPad Mini 2":     rect = CGRectMake(113,293,9,9)
+        case "iPad Mini 3":     rect = CGRectMake(113,293,9,9)
+        case "iPad Mini 4":     rect = CGRectMake(113,293,9,9)
+        default :               rect = CGRectMake(1,1,9,9)
+            
+        }
+        return rect
+    }
+    
+    
     
     func StartTimer()
     {

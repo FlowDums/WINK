@@ -56,9 +56,6 @@ public extension UIDevice {
         case "iPad4,4", "iPad4,5", "iPad4,6":           return "iPad Mini 2"
         case "iPad4,7", "iPad4,8", "iPad4,9":           return "iPad Mini 3"
         case "iPad5,1", "iPad5,2":                      return "iPad Mini 4"
-        case "iPad6,7", "iPad6,8":                      return "iPad Pro"
-        case "AppleTV5,3":                              return "Apple TV"
-        case "i386", "x86_64":                          return "Simulator"
         default:                                        return machineString
         }
     }
@@ -68,11 +65,10 @@ public extension UIDevice {
 
     var ViewControll:ViewController
     
-    init(vm:ViewController)
+    init(vm:ViewController, rectAre:CGRect)
     {
         ViewControll = vm
-        super.init(frame: CGRectMake(113,293,9,9))
-        CheckDevice()
+        super.init(frame: rectAre)
         
     }
 
@@ -96,25 +92,13 @@ public extension UIDevice {
         ViewControll.presentViewController(alert, animated: true, completion: nil)
     }
     
-    func CheckDevice() ->CGRect
-    {
-        
-        
-        
-        
     
-         var rect = CGRectMake(100, 100, 100, 100)
-        
-        var test = UIDevice().modelName
+    
+       
 
-        
-        return rect;
-    }
     
-    
-    
-        
+
 }
 
-    
-    
+
+
