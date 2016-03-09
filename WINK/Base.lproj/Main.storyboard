@@ -5,6 +5,36 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="qZQ-jv-Cls">
+            <objects>
+                <viewController id="O68-KX-Ng4" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4kT-42-ehq"/>
+                        <viewControllerLayoutGuide type="bottom" id="dVR-Rw-2HU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Ha-cE-1aY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7xp-5V-m0Q">
+                                <rect key="frame" x="65" y="261" width="190" height="45"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="ZOm-iX-266"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zXY-I7-Is6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-625" y="233"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WINK" customModuleProvider="target" sceneMemberID="viewController">
@@ -66,14 +96,48 @@
                         <outlet property="imageView" destination="XIC-O3-AD3" id="wPQ-AB-BA5"/>
                         <outlet property="lblTimer" destination="73w-hc-fWF" id="fGV-2k-8rn"/>
                         <outlet property="scrollView" destination="h0L-KD-UYD" id="mi6-Bg-kOg"/>
+                        <segue destination="7tr-vs-9Ap" kind="show" identifier="scoresShow" id="A5V-ge-zxg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="235" y="277"/>
+            <point key="canvasLocation" x="-280" y="215"/>
+        </scene>
+        <!--View Score-->
+        <scene sceneID="pGY-PC-dyg">
+            <objects>
+                <viewController id="7tr-vs-9Ap" customClass="viewScore" customModule="WINK" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kTq-k9-lMm"/>
+                        <viewControllerLayoutGuide type="bottom" id="aME-vL-XaQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Hjl-7v-fLg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5Q3-zy-jwq">
+                                <rect key="frame" x="20" y="20" width="280" height="528"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" id="ZqA-jZ-kyY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Te-HP-Mn3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="192" y="224"/>
         </scene>
     </scenes>
     <resources>
         <image name="where-s-cage1.jpg" width="1752" height="1168"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ZqA-jZ-kyY"/>
+    </inferredMetricsTieBreakers>
 </document>
