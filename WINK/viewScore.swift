@@ -9,11 +9,39 @@
 import Foundation
 import UIKit
 
-class viewScore :UIViewController
+class viewScore :UIViewController, UITableViewDelegate
 {
-    override func viewDidLoad() {
+    @IBOutlet weak var tableView: UITableView!
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        
-        
     }
+        
+        let players = Player.getPlayers()
+    
+        var name: String = ""
+        var score: String = ""
+        
+        //for player: [String] in players!
+        //{
+        //    name = player.getName()
+        //    score = player.getTime()
+        //}
+        
+        func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return self.players.count;
+        }
+        
+        func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+            var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
+            
+            cell.textLabel?.text = self.players[indexPath.row]
+            
+            return cell
+        }
+        
+        func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+            print("You selected cell #\(indexPath.row)!")
+        }
 }

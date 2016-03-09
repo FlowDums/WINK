@@ -14,7 +14,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
 
-    private var pseudo: String = ""
+    var pseudo: String = "test"
 
     var Timer = NSTimer();
     var CounterSec = 0
@@ -87,7 +87,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     func showScores(player: String)
     {
-        Player(playerName: player, playerScore: lblTimer.text!)
+        let player = Player(playerName: "test ?", playerScore: lblTimer.text!)
         
         performSegueWithIdentifier("scoresShow", sender: self)
         

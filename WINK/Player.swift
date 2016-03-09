@@ -11,10 +11,11 @@ import Foundation
 
 public class Player
 {
-    var name: String
-    var time: String
-    
-    var players: UITableView!
+    public var name: String
+    public var time: String
+
+    //public static var players: [Player] = []
+    public static var players: [String] = []
     
     init(playerName:String, playerScore:String)
     {
@@ -33,9 +34,14 @@ public class Player
         return self.time
     }
     
-    private func addPlayer()
+    public func addPlayer()
     {
-        
+        Player.players.append(self.getName() + " " + self.getTime())//(self)
+    }
+    
+    public static func getPlayers() -> [String]!//[Player]!
+    {
+        return Player.players
     }
     
 }
