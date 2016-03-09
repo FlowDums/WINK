@@ -25,15 +25,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         
         scrollView.maximumZoomScale = 6.0;
         scrollView.minimumZoomScale = 1.0;
-        
-       
-        let obstacleView = UICarreView(vm:self)
-        
-      //  obstacleView.backgroundColor = UIColor.clearColor()
-        
-        obstacleView.backgroundColor = UIColor.redColor();
-        
-        imageView.addSubview(obstacleView)
+        CreateValidArea()
         StartTimer()
         
     }

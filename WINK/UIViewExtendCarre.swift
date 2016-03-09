@@ -77,8 +77,7 @@ class UICustomImage : UIImageView
     init(vm:ViewController, rectAre:CGRect)
     {
         ViewControll = vm
-        super.init(frame: CGRectMake(109,249,10,12))
-        CheckDevice()
+        super.init(frame: rectAre)
         
     }
 
@@ -103,20 +102,6 @@ class UICustomImage : UIImageView
         ViewControll.presentViewController(alert, animated: true, completion: nil)
     }
     
-    func CheckDevice() ->CGRect
-    {
-        
-        
-        
-        
-    
-         var rect = CGRectMake(100, 100, 100, 100)
-        
-         var test = UIDevice().modelName
-
-        
-        return rect;
-    }
     
     
        
