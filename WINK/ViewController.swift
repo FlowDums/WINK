@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var lblTimer: UILabel!
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageView: UICustomImage!
     @IBOutlet weak var scrollView: UIScrollView!
 
     var pseudo: String = "test"
@@ -42,6 +42,46 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         super.didReceiveMemoryWarning()
        
     }
+    
+    func CreateValidArea()
+    {
+        let rectArea = CheckDevice()
+        let validArea = UICarreView(vm:self, rectAre: rectArea)
+        
+        //  obstacleView.backgroundColor = UIColor.clearColor()
+
+        imageView.addSubview(validArea)
+        
+    }
+    
+    
+    func CheckDevice()->CGRect
+    {
+        let model = UIDevice().modelName
+        let rect:CGRect
+        
+        switch model
+        {
+        
+        case "iPhone 4":        rect = CGRectMake(111,250,10,10)
+        case "iPhone 4s":       rect = CGRectMake(111,250,10,10)
+        case "iPhone 5":        rect = CGRectMake(111,295,10,10)
+        case "iPhone 5c":       rect = CGRectMake(111,295,10,10)
+        case "iPhone 5s":       rect = CGRectMake(111,295,10,10)
+        case "iPhone 6":        rect = CGRectMake(130,348,10,10)
+        case "iPhone 6 Plus":   rect = CGRectMake(145,385,10,10)
+        case "iPhone 6s":       rect = CGRectMake(127,346,10,10)
+        case "iPhone 6s Plus":  rect = CGRectMake(145,385,10,10)
+        case "iPad 2":          rect = CGRectMake(258,543,25,25)
+        case "iPad Air":        rect = CGRectMake(265,539,25,25)
+        case "iPad Air 2":      rect = CGRectMake(265,539,25,25)
+        default :               rect = CGRectMake(1,1,9,9)
+            
+        }
+        return rect
+    }
+    
+    
     
     func StartTimer()
     {
