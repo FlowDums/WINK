@@ -41,7 +41,6 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         let validArea = UICarreView(vm:self, rectAre: rectArea)
         
         //  obstacleView.backgroundColor = UIColor.clearColor()
-         validArea.backgroundColor = UIColor.redColor()
 
         imageView.addSubview(validArea)
         
