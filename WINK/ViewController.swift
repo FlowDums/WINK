@@ -105,7 +105,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     func saveScores()
     {
         var time: String = lblTimer.text!
-        let alert = UIAlertController(title: "Félicitations 😃  \r Vous avez trouver Nicolas !", message: "Entrer votre pseudo:", preferredStyle: UIAlertControllerStyle.Alert)
+        let alert = UIAlertController(title: "Félicitations 😃  \r Vous avez trouver Nicolas en \(time) s", message: "Entrer votre pseudo:", preferredStyle: UIAlertControllerStyle.Alert)
         
         alert.addTextFieldWithConfigurationHandler({(textField: UITextField!) in
             textField.placeholder = nil
@@ -126,6 +126,10 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     }
     
     
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?)
+    {
+        sleep(2)
+    }
     
     
     

@@ -11,25 +11,18 @@ import UIKit
 
 class viewScore: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
-    @IBOutlet weak var tableView: UITableView!
+        @IBOutlet weak var tableView: UITableView!
+        
+        override func viewDidLoad()
+        {
+            super.viewDidLoad()
+                        
+            self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        }
+        
+        let players:[String] = Player.getPlayers()
     
-    override func viewDidLoad()
-    {
-        super.viewDidLoad()
-        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
-    }
-        
-    let players:[String] = Player.getPlayers()
     
-        var name: String = ""
-        var score: String = ""
-        
-        //for player: [String] in players!
-        //{
-        //    name = player.getName()
-        //    score = player.getTime()
-        //}
-        
         func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
         {
             return self.players.count;
@@ -40,12 +33,10 @@ class viewScore: UIViewController, UITableViewDelegate, UITableViewDataSource
             var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
             
             cell.textLabel?.text = self.players[indexPath.row]
+            cell.textLabel?.textAlignment = .Center
             
             return cell
         }
-        
-        func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
-        {
-            print("You selected cell #\(indexPath.row)!")
-        }
+ 
+    
 }
