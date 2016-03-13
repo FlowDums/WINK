@@ -31,7 +31,7 @@ public class Player
     
     public func getTime() -> String
     {
-        return self.time.description
+        return self.time.description + "s"
     }
     
     public func addPlayer()
