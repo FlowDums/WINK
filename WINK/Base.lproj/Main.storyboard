@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FondFirst" translatesAutoresizingMaskIntoConstraints="NO" id="0VW-Gs-wF2">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FondFirst" translatesAutoresizingMaskIntoConstraints="NO" id="0VW-Gs-wF2">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GhK-aj-Hg8">
@@ -192,7 +192,7 @@
         <image name="where-s-cage1.jpg" width="1752" height="1168"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="A5V-ge-zxg"/>
+        <segue reference="FKr-FB-iUr"/>
         <segue reference="gcW-Ww-0Qd"/>
     </inferredMetricsTieBreakers>
 </document>
