@@ -155,8 +155,11 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DS4-Gl-dsf">
-                                <rect key="frame" x="20" y="28" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="13" y="25" width="46" height="30"/>
+                                <state key="normal" backgroundImage="gauche-icone-9774-64"/>
+                                <connections>
+                                    <segue destination="O68-KX-Ng4" kind="show" id="XAc-el-5JW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -193,6 +196,7 @@
         <image name="BTNSCORE3" width="207" height="95"/>
         <image name="FondFirst" width="1124" height="1435"/>
         <image name="Image" width="197" height="95"/>
+        <image name="gauche-icone-9774-64" width="64" height="64"/>
         <image name="where-s-cage1.jpg" width="1752" height="1168"/>
     </resources>
     <inferredMetricsTieBreakers>
