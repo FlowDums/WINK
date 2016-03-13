@@ -12,7 +12,7 @@ import Foundation
 public class Player
 {
     public var name: String
-    public var time: String
+    public var time: Float
 
     public static var players: [String] = []
     let userDefaults = NSUserDefaults.standardUserDefaults()
@@ -20,7 +20,7 @@ public class Player
     init(playerName:String, playerScore:String)
     {
         self.name = playerName.uppercaseString
-        self.time = playerScore
+        self.time = Float(playerScore.stringByReplacingOccurrencesOfString(":", withString: "."))!
         self.addPlayer()
     }
     
@@ -31,7 +31,7 @@ public class Player
     
     public func getTime() -> String
     {
-        return self.time
+        return self.time.description
     }
     
     public func addPlayer()
