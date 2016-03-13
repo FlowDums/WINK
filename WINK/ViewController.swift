@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController, UIScrollViewDelegate {
-
+    
     @IBOutlet weak var lblTimer: UILabel!
     @IBOutlet weak var imageView: UICustomImage!
     @IBOutlet weak var scrollView: UIScrollView!

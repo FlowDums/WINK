@@ -69,19 +69,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73w-hc-fWF">
-                                <rect key="frame" x="141" y="355" width="131" height="27"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="00:00:00">
-                                        <attributes>
-                                            <color key="NSColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <color key="highlightedColor" red="0.8125227434137543" green="0.81347910508859189" blue="0.82807305518617025" alpha="1" colorSpace="calibratedRGB"/>
-                            </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" indicatorStyle="black" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="h0L-KD-UYD">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
@@ -90,6 +77,16 @@
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8f-LI-fPf" userLabel="lblTimer">
+                                        <rect key="frame" x="168" y="35" width="87" height="27"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="78" id="Tot-AS-sFb"/>
+                                            <constraint firstAttribute="height" constant="27" id="YLk-HV-NUL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="XIC-O3-AD3" firstAttribute="centerY" secondItem="h0L-KD-UYD" secondAttribute="centerY" id="1Gk-me-VRh"/>
@@ -107,15 +104,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="h0L-KD-UYD" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Gga-ig-65c"/>
+                            <constraint firstItem="z8f-LI-fPf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="LcI-rU-gb1"/>
                             <constraint firstItem="h0L-KD-UYD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RLW-uH-dZI"/>
                             <constraint firstItem="h0L-KD-UYD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="c0v-yL-3WU"/>
+                            <constraint firstItem="z8f-LI-fPf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fIH-jb-m2m"/>
                             <constraint firstAttribute="trailing" secondItem="h0L-KD-UYD" secondAttribute="trailing" id="wll-0J-wrq"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="imageView" destination="XIC-O3-AD3" id="wPQ-AB-BA5"/>
-                        <outlet property="lblTimer" destination="73w-hc-fWF" id="3Yc-jP-l5B"/>
+                        <outlet property="lblTimer" destination="z8f-LI-fPf" id="tFp-FZ-DVQ"/>
                         <outlet property="scrollView" destination="h0L-KD-UYD" id="mi6-Bg-kOg"/>
                         <segue destination="7tr-vs-9Ap" kind="show" identifier="scoresShow" id="A5V-ge-zxg"/>
                     </connections>
