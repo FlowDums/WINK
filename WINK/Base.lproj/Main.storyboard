@@ -13,37 +13,42 @@
                         <viewControllerLayoutGuide type="top" id="4kT-42-ehq"/>
                         <viewControllerLayoutGuide type="bottom" id="dVR-Rw-2HU"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="3Ha-cE-1aY">
+                    <view key="view" contentMode="scaleAspectFill" id="3Ha-cE-1aY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FondFirst" translatesAutoresizingMaskIntoConstraints="NO" id="0VW-Gs-wF2">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FondFirst" translatesAutoresizingMaskIntoConstraints="NO" id="0VW-Gs-wF2">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dr7-xc-afx">
-                                <rect key="frame" x="29" y="478" width="126" height="61"/>
-                                <state key="normal" title="Button" image="Image"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POY-P4-tLS">
-                                <rect key="frame" x="168" y="478" width="126" height="61"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="126" id="pPg-vi-gNc"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="BTNSCORE3"/>
-                            </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GhK-aj-Hg8">
+                                <rect key="frame" x="20" y="465" width="280" height="77"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POY-P4-tLS">
+                                        <rect key="frame" x="146" y="8" width="126" height="61"/>
+                                        <state key="normal" backgroundImage="BTNSCORE3"/>
+                                        <connections>
+                                            <segue destination="7tr-vs-9Ap" kind="show" id="FKr-FB-iUr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dr7-xc-afx">
+                                        <rect key="frame" x="8" y="8" width="126" height="61"/>
+                                        <state key="normal" title="Button" image="Image"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="gcW-Ww-0Qd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="dVR-Rw-2HU" firstAttribute="top" secondItem="POY-P4-tLS" secondAttribute="bottom" constant="29" id="18P-76-lom"/>
-                            <constraint firstItem="0VW-Gs-wF2" firstAttribute="top" secondItem="3Ha-cE-1aY" secondAttribute="top" id="9NL-ps-GUs"/>
-                            <constraint firstItem="0VW-Gs-wF2" firstAttribute="leading" secondItem="3Ha-cE-1aY" secondAttribute="leading" id="AHJ-0o-szI"/>
-                            <constraint firstItem="POY-P4-tLS" firstAttribute="top" secondItem="4kT-42-ehq" secondAttribute="bottom" constant="458" id="HIx-g3-6US"/>
-                            <constraint firstItem="POY-P4-tLS" firstAttribute="bottom" secondItem="dr7-xc-afx" secondAttribute="bottom" id="QtS-er-Zee"/>
-                            <constraint firstItem="0VW-Gs-wF2" firstAttribute="bottom" secondItem="dVR-Rw-2HU" secondAttribute="top" id="UCz-Ql-gI6"/>
-                            <constraint firstItem="POY-P4-tLS" firstAttribute="leading" secondItem="dr7-xc-afx" secondAttribute="trailing" constant="13" id="gve-RQ-Xe0"/>
-                            <constraint firstAttribute="trailing" secondItem="0VW-Gs-wF2" secondAttribute="trailing" id="jdi-ys-LoO"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="POY-P4-tLS" secondAttribute="trailing" constant="10" id="kQY-LJ-zq3"/>
-                            <constraint firstItem="POY-P4-tLS" firstAttribute="top" secondItem="dr7-xc-afx" secondAttribute="top" id="vBd-fb-wpG"/>
+                            <constraint firstItem="0VW-Gs-wF2" firstAttribute="bottom" secondItem="dVR-Rw-2HU" secondAttribute="top" id="5fi-6w-fx1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0VW-Gs-wF2" secondAttribute="trailing" constant="30" id="Jqj-hh-ee7"/>
+                            <constraint firstItem="0VW-Gs-wF2" firstAttribute="leading" secondItem="3Ha-cE-1aY" secondAttribute="leading" id="aMt-3R-qBt"/>
+                            <constraint firstItem="0VW-Gs-wF2" firstAttribute="top" secondItem="3Ha-cE-1aY" secondAttribute="top" id="qFV-g0-32c"/>
+                            <constraint firstItem="dVR-Rw-2HU" firstAttribute="top" secondItem="GhK-aj-Hg8" secondAttribute="bottom" constant="20" id="r8i-6F-dLR"/>
+                            <constraint firstItem="GhK-aj-Hg8" firstAttribute="centerX" secondItem="0VW-Gs-wF2" secondAttribute="centerX" id="rbA-nt-4Kx"/>
+                            <constraint firstAttribute="trailing" secondItem="0VW-Gs-wF2" secondAttribute="trailing" id="wV6-N5-9yB"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -163,6 +168,23 @@
             </objects>
             <point key="canvasLocation" x="192" y="224"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="L9S-r0-aSs">
+            <objects>
+                <viewController id="jE8-bY-JVe" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ryd-Hf-hPf"/>
+                        <viewControllerLayoutGuide type="bottom" id="sx8-q9-jHB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kwL-sw-LPT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wMd-qe-ZRL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
     <resources>
         <image name="BTNSCORE3" width="207" height="95"/>
@@ -170,4 +192,8 @@
         <image name="Image" width="197" height="95"/>
         <image name="where-s-cage1.jpg" width="1752" height="1168"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="A5V-ge-zxg"/>
+        <segue reference="gcW-Ww-0Qd"/>
+    </inferredMetricsTieBreakers>
 </document>
