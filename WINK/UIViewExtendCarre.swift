@@ -57,13 +57,18 @@ public extension UIDevice {
 class UICustomImage : UIImageView
 {
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        if let touch = touches.first {
-            let position :CGPoint = touch.locationInView(self)
-            print(position.x)
-            print(position.y)
-            
+            if let touch = touches.first
+            {
+                let position :CGPoint = touch.locationInView(self)
+                //print(position.x)
+                //print(position.y)
+                
+                
+                // NE PAS EFFACER (c'est dans la consigne)
+                //To avoid players cheating by clicking everywhere, once a click is made in a place where Cage isn’t, the player has to wait 2 seconds before submitting another answer.
+                sleep(2)
+            }
         }
-    }
 }
 
 
@@ -86,11 +91,9 @@ class UICustomImage : UIImageView
     }
    
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        
-      
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?)
+    {
         testTouches(touches)
-    
     }
     
     func testTouches(touches: Set<UITouch>!)

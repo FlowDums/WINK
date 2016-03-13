@@ -14,12 +14,12 @@ public class Player
     public var name: String
     public var time: String
 
-    //public static var players: [Player] = []
     public static var players: [String] = []
+    let userDefaults = NSUserDefaults.standardUserDefaults()
     
     init(playerName:String, playerScore:String)
     {
-        self.name = playerName
+        self.name = playerName.uppercaseString
         self.time = playerScore
         self.addPlayer()
     }
@@ -36,12 +36,31 @@ public class Player
     
     public func addPlayer()
     {
-        Player.players.append(self.getName() + " --------------- " + self.getTime())//(self)
+        //resetData()
+        
+        Player.players = userDefaults.objectForKey("lesjoueurs") as? [String] ?? [String]()
+        
+        var space: String = "\t"
+        let nbSpace: Int = 20 - self.name.characters.count
+        
+        for _ in 1...nbSpace
+        {
+            space += "  "
+        }
+        
+        Player.players.append(self.getName() + space + self.getTime())
+        
+        userDefaults.setObject(Player.players, forKey: "lesjoueurs")
     }
     
-    public static func getPlayers() -> [String]!//[Player]!
+    public static func getPlayers() -> [String]!
     {
         return Player.players
+    }
+    
+    public func resetData()
+    {
+        userDefaults.setObject(nil, forKey: "lesjoueurs")
     }
     
 }
