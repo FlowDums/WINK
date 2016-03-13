@@ -114,6 +114,10 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         alert.addAction(UIAlertAction(title: "Enregistrer", style: UIAlertActionStyle.Default, handler: {action in self.showScores((self.pseudo?.text)!, time: time)}))
         
         self.presentViewController(alert, animated: true, completion: nil)
+        Timer.invalidate();
+        CounterMS = 0
+        CounterSec = 0
+        lblTimer.text = "00:00"
     
     }
     
@@ -128,7 +132,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?)
     {
-        sleep(2)
+       // sleep(2)
     }
     
     
